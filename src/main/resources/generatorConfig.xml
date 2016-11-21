@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
+<generatorConfiguration >
+  <classPathEntry location="C:\Users\980351396\.m2\repository\mysql\mysql-connector-java\5.1.26\mysql-connector-java-5.1.26.jar"/>
+  <context id="context1" >
+    <jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://bookpassci:3306/WicketMyBatisGuice" userId="sample" password="hoge" />
+ 
+    <!-- エンティティ作成先 -->
+    <javaModelGenerator targetPackage="com.tamu222i.wsm.bean" targetProject="c:/Users/980351396/git/wsm/src/main/java" />
+ 
+    <!-- MapperXML作成先 -->
+    <sqlMapGenerator targetPackage="com.tamu222i.wsm.mapper" targetProject="c:/Users/980351396/git/wsm/src/main/resources" />
+ 
+    <!-- Mapperインタフェース作成先 -->
+    <javaClientGenerator targetPackage="com.tamu222i.wsm.mapper" targetProject="c:/Users/980351396/git/wsm/src/main/java" type="XMLMAPPER" />
+    <table tableName="ACCESS" />
+  </context>
+</generatorConfiguration>

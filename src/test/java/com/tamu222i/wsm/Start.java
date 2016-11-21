@@ -34,11 +34,11 @@ public class Start
 
 		HttpConfiguration http_config = new HttpConfiguration();
 		http_config.setSecureScheme("https");
-		http_config.setSecurePort(8443);
+		http_config.setSecurePort(18443);
 		http_config.setOutputBufferSize(32768);
 
 		ServerConnector http = new ServerConnector(server, new HttpConnectionFactory(http_config));
-		http.setPort(8080);
+		http.setPort(18080);
 		http.setIdleTimeout(1000 * 60 * 60);
 
 		server.addConnector(http);
@@ -63,7 +63,7 @@ public class Start
 
 			ServerConnector https = new ServerConnector(server, new SslConnectionFactory(
 				sslContextFactory, "http/1.1"), new HttpConnectionFactory(https_config));
-			https.setPort(8443);
+			https.setPort(18443);
 			https.setIdleTimeout(500000);
 
 			server.addConnector(https);
